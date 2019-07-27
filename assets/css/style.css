@@ -10,6 +10,14 @@ h1 {
     color: white;
 }
 
+.display-4 {
+    color: black;
+}
+
 small {
+    color: white;
+}
+
+.form-text-text-muted {
     color: white;
 }

@@ -89,7 +89,7 @@ var savedStockList = [];
 
     // Create a bootstrap card for each item in the stockList array
 
-    for (var i = 0; i < movieList.length; i++) {
+    for (var i = 0; i < stockList.length; i++) {
 
       var stock = stockList[i];
       getMovie(stock);

@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Finn</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
 <body>
     <div class="container">
 
         <h1>Finn</h1>
-    
-    <form>
-        <div class="form-group">
-            <label for="InputStock">Stock Symbol</label>
-            <input type="symbol" class="form-control" id="inputSymbol" aria-describedby="symbolHelp" placeholder="Enter symbol">
-            <small id="emailHelp" class="form-text text-muted">Enter company's symbol (ex: MSFT = Microsoft)</small>
-          </div>
-          <button type="submit" class="btn btn-primary">Search</button>
-    </form>
-    
-      </div>
-    
-      <div class="container" id="finance-section"></div>
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script type="text/javascript"></script>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Virtual Wallet</h1>
+                <p class="lead">Remaining Balance to Invest
+                </p>
+            </div>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label for="InputStock">Stock Symbol</label>
+                <input type="symbol" class="form-control" id="inputSymbol" aria-describedby="symbolHelp"
+                    placeholder="Enter symbol">
+                <small id="stockHelp" class="form-text text-muted">Enter company's symbol (ex: MSFT = Microsoft)</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+
+    </div>
+
+    <div class="container" id="finance-section"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript"></script>
 </body>
+
 </html>

@@ -64,7 +64,7 @@ var savedStockList = [];
         url: queryURL,
         method: "GET"
       }).done(function(response) {
-        
+       console.log("hello"); 
         if (response.Response === "False") {
           alert(response.Error);
         }
@@ -92,7 +92,7 @@ var savedStockList = [];
     for (var i = 0; i < stockList.length; i++) {
 
       var stock = stockList[i];
-      getMovie(stock);
+      getSymbol(stock);
       
     }
 
@@ -102,8 +102,8 @@ var savedStockList = [];
     //
 
     $("#search").click(function() {
-
+console.log("hello")
       var stock = $("#stock-name").val();
-      getMovie(stock);
+      getSymbol(stock);
       
     });

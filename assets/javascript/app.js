@@ -10,7 +10,7 @@ var savedStockList = [];
 
     // Display saved list of stocks
 
-    if (Array.isArray(savedMovieList)) {
+    if (Array.isArray(savedStockList)) {
 
       for (var i = 0; i < savedStockList.length; i++) {
         var stock = savedStockList[i];

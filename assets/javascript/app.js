@@ -40,13 +40,13 @@ var savedStockList = [];
       // Add stock name
       var stockName = $("<h1>");
       stockName.addClass("card-title");
-      stockName.html(response.Title);
+      stockName.html(response.symbol);
       article.append(stockName);
 
       // Add information/ metrics
       var stockDescription = $("<p>");
       stockDescription.addClass("card-text");
-      stockDescription.html(response.Plot);
+      stockDescription.html(response.price);
       article.append(stockDescription);
 
       // Append the new card to the HTML body

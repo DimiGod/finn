@@ -6,7 +6,7 @@ var savedStockList = [];
     // TO DO: Retrieve the stocks from local Storage and store in stockList array
     //
 
-    savedStockList = JSON.parse(localStorage.getItem("movies"));
+    savedStockList = JSON.parse(localStorage.getItem("stocks"));
 
     // Display saved list of stocks
 
@@ -68,19 +68,19 @@ var savedStockList = [];
         if (response.Response === "False") {
           alert(response.Error);
         }
-        else if (stockList.indexOf(response.Title) >= 0) {
+        else if (stockList.indexOf(response.symbol) >= 0) {
           alert ("Stock already in List!")
         }
         else 
         {
           createCard(response);
-          stockList.push(response.Title);
+          stockList.push(response.symbol);
 
           //
           // TO DO: Save the stocks in the stockList array to Local Storage
           //
           
-          localStorage.setItem("movies", JSON.stringify(stockList));
+          localStorage.setItem("stocks", JSON.stringify(stockList));
 
         }
       });

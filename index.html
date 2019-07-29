@@ -15,22 +15,45 @@
     <div class="container">
 
         <h1>Finn</h1>
-        <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-4">Your Portfolio</h1>
-                <p class="lead">Track your performance here
-                </p>
-            </div>
-        </div>
+                <div class="media">
+                    <div class="media-body">
+                        <div class="card" mr=3 style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Portfolio Performance</h5>
+                                <p class="card-text">
+                                    <ul>
+                                        <li>Current Value: $XXXX.XX</li>
+                                        <li>Net Gains (Loss): $XXXX.XX</li>
+                                        <li>Top Performing Stock: "XXXX"</li>
+                                        <li>Worse Performing Stock: "XXXX"</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
 
-            <div class="form-group">
-                <label for="InputStock">Stock Symbol</label>
-                <input type="symbol" class="form-control" id="inputSymbol" aria-describedby="symbolHelp"
-                    placeholder="Enter symbol">
-                <small id="stockHelp" class="form-text-text-muted">Enter company's symbol (ex: MSFT = Microsoft)</small>
+                        <div class="card" mr=3 style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Wallet Balance</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Remaining Amount To Invest</h6>
+                                <h1 class="card-text">$XXXX.XX</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="assets/images/phGraph-1.png" width=720 class="ml-3" alt="Portfolio Performance Graph">
+                </div>
             </div>
-            <button id="search" type="submit" class="btn btn-primary">Search</button>
+
         
+
+        <div class="form-group">
+            <label for="InputStock">Stock Symbol</label>
+            <input type="symbol" class="form-control" id="inputSymbol" aria-describedby="symbolHelp"
+                placeholder="Enter symbol">
+            <small id="stockHelp" class="form-text-text-muted">Enter company's symbol (ex: MSFT = Microsoft)</small>
+        </div>
+        <button id="search" type="submit" class="btn btn-primary">Search</button>
+
 
     </div>
 

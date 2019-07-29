@@ -16,8 +16,15 @@
 
         <h1>Finn</h1>
         <div class="container">
+            <div class="form-group">
+                <label for="InputStock">Stock Symbol</label>
+                <input type="symbol" class="form-control" id="inputSymbol" aria-describedby="symbolHelp"
+                    placeholder="Enter symbol">
+                <small id="stockHelp" class="form-text-text-muted">Enter company's symbol (ex: MSFT = Microsoft)</small>
+            </div>
+            <button id="search" type="submit" class="btn btn-primary">Search</button>
             <div class="media">
-                <div class="media-body">
+                <div class="media-body" style="margin-top: 1em;">
                     <div class="card" mr=3 style="width: 18rem;">
                         <div class="card-body">
                             <h5 class="card-title">Portfolio Performance</h5>
@@ -40,19 +47,9 @@
                         </div>
                     </div>
                 </div>
-                <img src="assets/images/phGraph-1.png" width=720 class="ml-3" alt="Portfolio Performance Graph">
+                <img src="assets/images/phGraph-2.JPG" width=850 class="ml-3" style="margin-top: 3em;" alt="Portfolio Performance Graph">
             </div>
         </div>
-
-
-
-        <div class="form-group">
-            <label for="InputStock">Stock Symbol</label>
-            <input type="symbol" class="form-control" id="inputSymbol" aria-describedby="symbolHelp"
-                placeholder="Enter symbol">
-            <small id="stockHelp" class="form-text-text-muted">Enter company's symbol (ex: MSFT = Microsoft)</small>
-        </div>
-        <button id="search" type="submit" class="btn btn-primary">Search</button>
 
 
     </div>
@@ -77,52 +74,52 @@
             </div>
 
             <div class="col-md-3">
-                    <div class="card" style="width: 17rem;">
-                        <img src="assets/images/GOOG.png" class="card-img-top" alt="Google Price Graph">
-                        <div class="card-body">
-                            <h5 class="card-title">GOOG</h5>
-                            <p class="card-text">Alphabet Inc Class C </p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Price (per share): $xxx.xx</li>
-                                <li class="list-group-item">52WK High: $xxx.xx</li>
-                                <li class="list-group-item">52WK Low: $xxx.xx</li>
-                        </ul>
+                <div class="card" style="width: 17rem;">
+                    <img src="assets/images/GOOG.png" class="card-img-top" alt="Google Price Graph">
+                    <div class="card-body">
+                        <h5 class="card-title">GOOG</h5>
+                        <p class="card-text">Alphabet Inc Class C </p>
                     </div>
-    
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Price (per share): $xxx.xx</li>
+                        <li class="list-group-item">52WK High: $xxx.xx</li>
+                        <li class="list-group-item">52WK Low: $xxx.xx</li>
+                    </ul>
                 </div>
 
-                <div class="col-md-3">
-                        <div class="card" style="width: 17rem;">
-                            <img src="assets/images/AMZN.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">AMZN</h5>
-                                <p class="card-text">Amazon Inc.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Price (per share): $xxx.xx</li>
-                                    <li class="list-group-item">52WK High: $xxx.xx</li>
-                                    <li class="list-group-item">52WK Low: $xxx.xx</li>
-                            </ul>
-                        </div>
-        
-                    </div>
+            </div>
 
-                    <div class="col-md-3">
-                            <div class="card" style="width: 17rem;">
-                                <img src="assets/images/AAPL.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">AAPL</h5>
-                                    <p class="card-text">Apple Inc.</p>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">Price (per share): $xxx.xx</li>
-                                        <li class="list-group-item">52WK High: $xxx.xx</li>
-                                        <li class="list-group-item">52WK Low: $xxx.xx</li>
-                                </ul>
-                            </div>
-            
-                        </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 17rem;">
+                    <img src="assets/images/AMZN.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">AMZN</h5>
+                        <p class="card-text">Amazon Inc.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Price (per share): $xxx.xx</li>
+                        <li class="list-group-item">52WK High: $xxx.xx</li>
+                        <li class="list-group-item">52WK Low: $xxx.xx</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+                <div class="card" style="width: 17rem;">
+                    <img src="assets/images/AAPL.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">AAPL</h5>
+                        <p class="card-text">Apple Inc.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Price (per share): $xxx.xx</li>
+                        <li class="list-group-item">52WK High: $xxx.xx</li>
+                        <li class="list-group-item">52WK Low: $xxx.xx</li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
     </div>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

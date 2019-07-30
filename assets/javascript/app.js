@@ -24,15 +24,6 @@ var savedStockList = [];
       var article = $("<article>");
       article.addClass("card");
 
-      // Create an image elment, add attributes, and append to figure
-      var posterImage = $("<img>");
-      posterImage.attr("src", response.Poster);
-      posterImage.attr("alt", response.Title + " Poster");
-
-      var moviePoster = $("<figure>");
-      moviePoster.append(posterImage);
-      article.append(moviePoster);
-
       // Create a new card body container
       var cardBody = $("<div>");
       cardBody.addClass("card-body");
@@ -40,14 +31,30 @@ var savedStockList = [];
       // Add stock name
       var stockName = $("<h1>");
       stockName.addClass("card-title");
-      stockName.html(response.symbol);
+      stockName.html(response["Meta Data"]['2. Symbol']);
       article.append(stockName);
 
       // Add information/ metrics
-      var stockDescription = $("<p>");
-      stockDescription.addClass("card-text");
-      stockDescription.html(response.price);
-      article.append(stockDescription);
+      var series= response["Time Series (Daily)"];
+      var dailyOpen = $("<p>");
+      dailyOpen.addClass("card-text");
+      dailyOpen.html(response["Time Series (Daily)"]["2019-07-30"]["1. open"]);
+      article.append(dailyOpen);
+
+      var dailyHigh = $("<p>");
+      dailyHigh.addClass("card-text");
+      dailyHigh.html(response["Time Series (Daily)"]["2019-07-30"]["2. high"]);
+      article.append(dailyHigh);
+
+      var dailyLow = $("<p>");
+      dailyLow.addClass("card-text");
+      dailyLow.html(response["Time Series (Daily)"]["2019-07-30"]["3. low"]);
+      article.append(dailyLow);
+
+      var dailyClose = $("<p>");
+      dailyClose.addClass("card-text");
+      dailyClose.html(response["Time Series (Daily)"]["2019-07-30"]["4. close"]);
+      article.append(dailyClose);
 
       // Append the new card to the HTML body
       $("#finance-section").append(article);

@@ -6,7 +6,7 @@ label {
     color: white;
 }
 
-h1 {
+.logo {
     color: white;
 }
 
@@ -24,4 +24,8 @@ small {
 
 .card-text{
     color: #222222;
+}
+
+h1{
+    color: black
 }

@@ -22,7 +22,7 @@ console.log(queryURL)
     var symbol = $("#inputSymbol").val();
     getSymbol(symbol);
     
-//create function for the current date in the same format as the API
+//*** */create function for the current date in the same format as the API***\\
   });
 
   //create a card with different metrics//
@@ -52,17 +52,17 @@ console.log(queryURL)
     var dailyHigh = $("<p>");
     dailyHigh.addClass("card-text");
     dailyHigh.html(response["Time Series (Daily)"]["2019-07-30"]["2. high"]);
-    article.append(dailyHigh);
+    article.append("Daily High: ", dailyHigh);
 
     var dailyLow = $("<p>");
     dailyLow.addClass("card-text");
     dailyLow.html(response["Time Series (Daily)"]["2019-07-30"]["3. low"]);
-    article.append(dailyLow);
+    article.append("Daily Low: ", dailyLow);
 
     var dailyClose = $("<p>");
     dailyClose.addClass("card-text");
     dailyClose.html(response["Time Series (Daily)"]["2019-07-30"]["4. close"]);
-    article.append(dailyClose);
+    article.append("Close: ",dailyClose);
 
     // Append the new card to the HTML body
     $("#stockData").append(article);

@@ -107,7 +107,7 @@ for (var i = 0; i < stockList.length; i++) {
 //
 
 $("#search").click(function() {
-    console.log("hello")
+    console.log("hello");
     var stock = $("#stock-name").val();
     getSymbol(stock);
 

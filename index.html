@@ -15,14 +15,7 @@
     <div class="container">
 
         <h1>Finn</h1>
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4">Your Portfolio</h1>
-                <p class="lead">Track your performance here
-                </p>
-            </div>
-        </div>
-
+        <div class="container">
             <div class="form-group">
                 <label for="InputStock">Stock Symbol</label>
                 <input type="symbol" class="form-control" id="inputSymbol" aria-describedby="symbolHelp"
@@ -30,14 +23,107 @@
                 <small id="stockHelp" class="form-text-text-muted">Enter company's symbol (ex: MSFT = Microsoft)</small>
             </div>
             <button id="search" type="submit" class="btn btn-primary">Search</button>
-        
+            <div class="media">
+                <div class="media-body" style="margin-top: 1em;">
+                    <div class="card" mr=3 style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Portfolio Performance</h5>
+                            <p class="card-text">
+                                <ul>
+                                    <li>Current Value: $XXXX.XX</li>
+                                    <li>Net Gains (Loss): $XXXX.XX</li>
+                                    <li>Top Performing Stock: "XXXX"</li>
+                                    <li>Lowest Performing Stock: "XXXX"</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin-top: 1em; width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Wallet Balance</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Remaining Amount To Invest</h6>
+                            <h1 class="card-text">$XXXX.XX</h1>
+                        </div>
+                    </div>
+                </div>
+                <img src="assets/images/phGraph-2.JPG" width=850 class="ml-3" style="margin-top: 3em;" alt="Portfolio Performance Graph">
+            </div>
+        </div>
+
 
     </div>
 
-    <div class="container" id="finance-section"></div>
+    <div class="container" id="finance-section" style="margin-top:1em; margin-bottom:2em">
+        <h1>My Stocks</h1>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card" style="width: 17rem;">
+                    <img src="assets/images/MSFT.png" class="card-img-top" alt="Microsoft Price Graph">
+                    <div class="card-body">
+                        <h5 class="card-title">MSFT</h5>
+                        <p class="card-text">Microsoft Corporation</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Price (per share): $xxx.xx</li>
+                        <li class="list-group-item">52WK High: $xxx.xx</li>
+                        <li class="list-group-item">52WK Low: $xxx.xx</li>
+                    </ul>
+                </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card" style="width: 17rem;">
+                    <img src="assets/images/GOOG.png" class="card-img-top" alt="Google Price Graph">
+                    <div class="card-body">
+                        <h5 class="card-title">GOOG</h5>
+                        <p class="card-text">Alphabet Inc Class C </p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Price (per share): $xxx.xx</li>
+                        <li class="list-group-item">52WK High: $xxx.xx</li>
+                        <li class="list-group-item">52WK Low: $xxx.xx</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+                <div class="card" style="width: 17rem;">
+                    <img src="assets/images/AMZN.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">AMZN</h5>
+                        <p class="card-text">Amazon Inc.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Price (per share): $xxx.xx</li>
+                        <li class="list-group-item">52WK High: $xxx.xx</li>
+                        <li class="list-group-item">52WK Low: $xxx.xx</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+                <div class="card" style="width: 17rem;">
+                    <img src="assets/images/AAPL.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">AAPL</h5>
+                        <p class="card-text">Apple Inc.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Price (per share): $xxx.xx</li>
+                        <li class="list-group-item">52WK High: $xxx.xx</li>
+                        <li class="list-group-item">52WK Low: $xxx.xx</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>-->
 
 </body>
 

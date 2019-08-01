@@ -25,30 +25,39 @@ function createCard(response) {
     let article = $("<article>");
     article.addClass("card");
 
-    // Create an image element, add attributes, and append to figure
-    let posterImage = $("<img>");
-    posterImage.attr("src", response.Poster);
-    posterImage.attr("alt", response.Title + " Poster");
+      // Create a new card body container
+      var cardBody = $("<div>");
+      cardBody.addClass("card-body");
 
-    let moviePoster = $("<figure>");
-    moviePoster.append(posterImage);
-    article.append(moviePoster);
+      // Add stock name
+      var stockName = $("<h1>");
+      stockName.addClass("card-title");
+      console.log(response)
+      stockName.html(response["Meta Data"]['2. Symbol']);
+      article.append(stockName);
 
-    // Create a new card body container
-    var cardBody = $("<div>");
-    cardBody.addClass("card-body");
+      // Add information/ metrics
+      var series= response["Time Series (Daily)"];
+      var dailyOpen = $("<p>");
+      dailyOpen.addClass("card-text");
+      dailyOpen.html(response["Time Series (Daily)"]["2019-07-30"]["1. open"]);
+      article.append(dailyOpen);
 
-    // Add stock name
-    let stockName = $("<h1>");
-    stockName.addClass("card-title");
-    stockName.html(response.symbol);
-    article.append(stockName);
+      var dailyHigh = $("<p>");
+      dailyHigh.addClass("card-text");
+      dailyHigh.html(response["Time Series (Daily)"]["2019-07-30"]["2. high"]);
+      article.append(dailyHigh);
 
-    // Add information/ metrics
-    var stockDescription = $("<p>");
-    stockDescription.addClass("card-text");
-    stockDescription.html(response.price);
-    article.append(stockDescription);
+      var dailyLow = $("<p>");
+      dailyLow.addClass("card-text");
+      dailyLow.html(response["Time Series (Daily)"]["2019-07-30"]["3. low"]);
+      article.append(dailyLow);
+
+      var dailyClose = $("<p>");
+      dailyClose.addClass("card-text");
+      dailyClose.html(response["Time Series (Daily)"]["2019-07-30"]["4. close"]);
+      article.append(dailyClose);
+
 
     // Append the new card to the HTML body
     $("#finance-section").append(article);
@@ -61,11 +70,13 @@ function createCard(response) {
  */
 function getSymbol(stockSymbol) {
 
-    // queryURL endpoint for Alpha Vantage API
-    var queryURL = "https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=" + stockSymbol + "&apikey=0V05X9O48C7R2P6N";
 
-    // AJAX call to Alpha Vantage API with promise and callback handler
-    $.ajax({
+      // queryURL endpoint for Alpha Vantage API
+      var queryURL = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol="+stockSymbol+"&apikey=0V05X9O48C7R2P6N";
+console.log(queryURL)
+      // AJAX call to Alpha Vantage API with promise and callback handler
+      $.ajax({
+
         url: queryURL,
         method: "GET"
     }).done(function(response) {
@@ -110,5 +121,5 @@ $("#search").click(function() {
     console.log("hello");
     var stock = $("#stock-name").val();
     getSymbol(stock);
+    });
 
-});

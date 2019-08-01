@@ -21,3 +21,7 @@ small {
 .form-text-text-muted {
     color: white;
 }
+
+.card-text{
+    color: #222222;
+}

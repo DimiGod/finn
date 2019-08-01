@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Finn</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container" id="personalPerformance">
+        <h1>Finn</h1>
+        <div class="row">
+            <div class="col-md-4" id="performanceMetricsArea">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Portfolio Performance</h5>
+                        <p class="card-text">Tracks the value of your portfolio and provides insight to your
+                            performance.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <!--Starting Value will be held here- this is constant and doesn't change after initial calculation-->
+                        <li class="list-group-item">Starting Value: <h3 id="startingValue"></h3> 
+                        </li>
+                        <!--Current value as calculated by a function that multiplies a stocks current price by the number we own, and adds that to the same calculation for each other stock equation=((s1 price x # of shares owned)+(s2 price x # of shares owned)+...(s'n' price x # of shares owned))-->
+                        <li class="list-group-item">Current Value: <h3 id="currentValue"></h3>  
+                        </li>
+                        <!-- Net change is just current value - starting value-->
+                        <li class="list-group-item">Net Gain (Loss): <h3 id="netGain"></h3> 
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Wallet Balance</h5>
+                        <p class="card-text">Remaining amount to invest</p>
+                        <h2 id="walletBalance">$XXXX.xx</h2> <!--everyone will begin with the same amount, and the remaining amount will be calculated and displayed here-->
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4" id="graphArea">
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="container" id="searchBar" style="margin-top: 1em; margin-bottom:2em">
+            <div class="form-group">
+                    <label for="InputStock">Stock Symbol</label>
+                    <input type="symbol" class="form-control" id="inputSymbol" aria-describedby="symbolHelp"
+                        placeholder="Enter symbol">
+                    <small id="stockHelp" class="form-text-text-muted">Enter company's symbol (ex: MSFT = Microsoft)</small>
+                </div>
+                <button id="search" type="submit" class="btn btn-primary">Search</button>
+    </div>
+    <div class="container" id="stockData">
+        <!--Every saved stock will be shown here, a function will create a bootstrap card displaying different data in this container-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/javascript/app2.js"></script>
+    </div>
+
+</body>
+
+</html>

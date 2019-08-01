@@ -8,9 +8,10 @@ console.log(queryURL)
       url: queryURL,
       method: "GET"
     }).done(function(response) {
-     console.log("hello"); 
+     console.log("hello");
+     createCard(response); 
     });
-    createCard(response);
+    
   }
   
   //
@@ -46,7 +47,7 @@ console.log(queryURL)
     var dailyOpen = $("<p>");
     dailyOpen.addClass("card-text");
     dailyOpen.html(response["Time Series (Daily)"]["2019-07-30"]["1. open"]);
-    article.append(dailyOpen);
+    article.append("Open: ", dailyOpen);
 
     var dailyHigh = $("<p>");
     dailyHigh.addClass("card-text");

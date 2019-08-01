@@ -13,7 +13,7 @@ savedStockList = JSON.parse(localStorage.getItem("stocks"));
 
 // Display saved list of stocks
 
-function (savedStockList)
+function save(savedStockList)
     for (let i = 0; i < savedStockList.length; i++) {
         let stock = savedStockList[i];
         getSymbol(stock);

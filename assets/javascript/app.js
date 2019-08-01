@@ -31,6 +31,7 @@ var savedStockList = [];
       // Add stock name
       var stockName = $("<h1>");
       stockName.addClass("card-title");
+      console.log(response)
       stockName.html(response["Meta Data"]['2. Symbol']);
       article.append(stockName);
 
@@ -64,8 +65,8 @@ var savedStockList = [];
     function getSymbol(stockSymbol) {
 
       // queryURL endpoint for Alpha Vantage API
-      var queryURL = "https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=" + stockSymbol + "&apikey=0V05X9O48C7R2P6N";
-
+      var queryURL = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol="+stockSymbol+"&apikey=0V05X9O48C7R2P6N";
+console.log(queryURL)
       // AJAX call to Alpha Vantage API with promise and callback handler
       $.ajax({
         url: queryURL,
@@ -109,8 +110,7 @@ var savedStockList = [];
     //
 
     $("#search").click(function() {
-console.log("hello")
-      var stock = $("#stock-name").val();
-      getSymbol(stock);
+      var symbol = $("#inputSymbol").val();
+      getSymbol(symbol);
       
     });

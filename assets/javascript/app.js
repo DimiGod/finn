@@ -1,28 +1,29 @@
 //Alpha Vantage API Key: 0V05X9O48C7R2P6N
-var savedStockList = [];
-    var stockList = [];
+var savedStockList;
+var stockList = [];
 
-    //
-    // TO DO: Retrieve the stocks from local Storage and store in stockList array
-    //
+//
+// TO DO: Retrieve the stocks from local Storage and store in stockList array
+//
 
-    savedStockList = JSON.parse(localStorage.getItem("stocks"));
+/**
+ * @type {JSON} savedStockList - Get stocks detail container from previous save.
+ */
+savedStockList = JSON.parse(localStorage.getItem("stocks"));
 
-    // Display saved list of stocks
+// Display saved list of stocks
 
-    if (Array.isArray(savedStockList)) {
-
-      for (var i = 0; i < savedStockList.length; i++) {
-        var stock = savedStockList[i];
+function (savedStockList)
+    for (let i = 0; i < savedStockList.length; i++) {
+        let stock = savedStockList[i];
         getSymbol(stock);
-      }
-
     }
 
-    function createCard(response) {
-      // Create a new boostrap card container
-      var article = $("<article>");
-      article.addClass("card");
+function createCard(response) {
+    // Create a new boostrap card container
+    var article = $("<article>");
+    article.addClass("card");
+
 
       // Create a new card body container
       var cardBody = $("<div>");
@@ -57,60 +58,65 @@ var savedStockList = [];
       dailyClose.html(response["Time Series (Daily)"]["2019-07-30"]["4. close"]);
       article.append(dailyClose);
 
-      // Append the new card to the HTML body
-      $("#finance-section").append(article);
 
-    }
+    // Append the new card to the HTML body
+    $("#finance-section").append(article);
 
-    function getSymbol(stockSymbol) {
+}
+
+function getSymbol(stockSymbol) {
+
 
       // queryURL endpoint for Alpha Vantage API
       var queryURL = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol="+stockSymbol+"&apikey=0V05X9O48C7R2P6N";
 console.log(queryURL)
       // AJAX call to Alpha Vantage API with promise and callback handler
       $.ajax({
+
         url: queryURL,
         method: "GET"
-      }).done(function(response) {
-       console.log("hello"); 
+    }).done(function(response) {
+        console.log("hello");
         if (response.Response === "False") {
-          alert(response.Error);
+            alert(response.Error);
         }
         else if (stockList.indexOf(response.symbol) >= 0) {
-          alert ("Stock already in List!")
+            alert ("Stock already in List!")
         }
         else 
         {
-          createCard(response);
-          stockList.push(response.symbol);
+            createCard(response);
+            stockList.push(response.symbol);
 
-          //
-          // TO DO: Save the stocks in the stockList array to Local Storage
-          //
+            //
+            // TO DO: Save the stocks in the stockList array to Local Storage
+            //
           
-          localStorage.setItem("stocks", JSON.stringify(stockList));
+            localStorage.setItem("stocks", JSON.stringify(stockList));
 
         }
-      });
+    });
 
-    }
+}
 
-    // Create a bootstrap card for each item in the stockList array
+// Create a bootstrap card for each item in the stockList array
 
-    for (var i = 0; i < stockList.length; i++) {
+for (var i = 0; i < stockList.length; i++) {
 
-      var stock = stockList[i];
-      getSymbol(stock);
+    var stock = stockList[i];
+    getSymbol(stock);
       
-    }
+}
 
-    //
-    // Create button click handler to get the form submission,
-    // and call the AJAX function, passing the name of the new stock
-    //
+//
+// Create button click handler to get the form submission,
+// and call the AJAX function, passing the name of the new stock
+//
+
 
     $("#search").click(function() {
       var symbol = $("#inputSymbol").val();
       getSymbol(symbol);
       
     });
+

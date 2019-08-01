@@ -12,6 +12,10 @@ var stockList = [];
 savedStockList = JSON.parse(localStorage.getItem("stocks"));
 
 // Display saved list of stocks
+for (let i = 0; i < savedStockList.length; i++) {
+    getSymbol(savedStockList[i]);
+}
+
 
 function save(savedStockList)
     for (let i = 0; i < savedStockList.length; i++) {
@@ -21,9 +25,8 @@ function save(savedStockList)
 
 function createCard(response) {
     // Create a new boostrap card container
-    var article = $("<article>");
+    let article = $("<article>");
     article.addClass("card");
-
 
       // Create a new card body container
       var cardBody = $("<div>");
@@ -64,6 +67,10 @@ function createCard(response) {
 
 }
 
+/**
+ * getSymbol() get the stock symbol via Alpha Vantage API and add it to stockList.
+ * @param {string} stockSymbol - User's input in the search bar.
+ */
 function getSymbol(stockSymbol) {
 
 

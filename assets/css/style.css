@@ -27,5 +27,9 @@ small {
 }
 
 h1{
-    color: black
+    color: black;
+}
+
+#card{
+   width: 18rem; 
 }

@@ -47,25 +47,38 @@ console.log(queryURL)
     article.append(stockName);
 
     // Add information/ metrics
+    function formatDate() {
+        var d = new Date(),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+    
+        if (month.length < 2) month = '0' + month;
+        if (day.length < 2) day = '0' + day;
+    
+        return [year, month, day].join('-');
+    }
+    var today = formatDate();
+    console.log(today);
     var series= response["Time Series (Daily)"];
     var dailyOpen = $("<p>");
     dailyOpen.addClass("card-text");
-    dailyOpen.html(response["Time Series (Daily)"]["2019-07-30"]["1. open"]);
+    dailyOpen.html(response["Time Series (Daily)"][today]["1. open"]);
     article.append("Open: ", dailyOpen);
 
     var dailyHigh = $("<p>");
     dailyHigh.addClass("card-text");
-    dailyHigh.html(response["Time Series (Daily)"]["2019-07-30"]["2. high"]);
+    dailyHigh.html(response["Time Series (Daily)"][today]["2. high"]);
     article.append("Daily High: ", dailyHigh);
 
     var dailyLow = $("<p>");
     dailyLow.addClass("card-text");
-    dailyLow.html(response["Time Series (Daily)"]["2019-07-30"]["3. low"]);
+    dailyLow.html(response["Time Series (Daily)"][today]["3. low"]);
     article.append("Daily Low: ", dailyLow);
 
     var dailyClose = $("<p>");
     dailyClose.addClass("card-text");
-    dailyClose.html(response["Time Series (Daily)"]["2019-07-30"]["4. close"]);
+    dailyClose.html(response["Time Series (Daily)"][today]["4. close"]);
     article.append("Close: ",dailyClose);
 
     // Append the new card to the HTML body

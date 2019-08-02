@@ -120,10 +120,9 @@ for (var i = 0; i < stockList.length; i++) {
 // and call the AJAX function, passing the name of the new stock
 //
 
-
-    $("#search").click(function() {
-      var symbol = $("#inputSymbol").val();
-      getSymbol(symbol);
-      
+$("#search").click(function() {
+    console.log("hello");
+    var stock = $("#stock-name").val();
+    getSymbol(stock);
     });
 

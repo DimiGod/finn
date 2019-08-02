@@ -18,15 +18,19 @@ console.log(queryURL)
   // Create button click handler to get the form submission,
   // and call the AJAX function, passing the name of the new stock
   //
+
+
+
   $("#search").click(function() {
     var symbol = $("#inputSymbol").val();
     getSymbol(symbol);
     
-//*** */create function for the current date in the same format as the API***\\
+
   });
 
   //create a card with different metrics//
   function createCard(response) {
+//create today's date and format it to the same date as the API//
     // Create a new boostrap card container
     var article = $("<article>");
     article.addClass("card");

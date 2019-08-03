@@ -125,7 +125,8 @@ function createCard(response, response2) {
     });
 
     function sum(total, num) {
-        return parseFloat(total) + parseFloat(num);
+        var sum = parseFloat(total) + parseFloat(num);
+        return "" + sum.toFixed(2);
     }
     
     $("#startingValue").text(v1.reduce(sum));

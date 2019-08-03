@@ -125,11 +125,14 @@ function createCard(response, response2) {
     });
 
     function sum(total, num) {
-        var sum = parseFloat(total) + parseFloat(num);
-        return "" + sum.toFixed(2);
+        return parseFloat(total) + parseFloat(num);
     }
+    var v1Sum = parseFloat(v1.reduce(sum));
+    var v2Sum = parseFloat(v2.reduce(sum));
+    var v3Sum = v2Sum - v1Sum;
     
-    $("#startingValue").text(v1.reduce(sum));
-    $("#currentValue").text(v2.reduce(sum));
+    $("#startingValue").text(v1Sum.toFixed(2));
+    $("#currentValue").text(v2Sum.toFixed(2));
+    $("#netGain").text(v3Sum.toFixed(2));
 
 }

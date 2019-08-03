@@ -30,6 +30,11 @@ h1{
     color: black;
 }
 
-#card{
-   width: 18rem; 
+h2{
+    color: white;
+}
+
+.stockCard{
+    float: left;
+    width: 17rem
 }

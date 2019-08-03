@@ -1,6 +1,6 @@
 function getSymbol(stockSymbol) {
 
-    // queryURL endpoint for Alpha Vantage API
+    // queryURL endpoint for Alpha Vantage (Daily)API
     var queryURL = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=" + stockSymbol + "&apikey=0V05X9O48C7R2P6N";
     console.log(queryURL)
     // AJAX call to Alpha Vantage API with promise and callback handler
@@ -9,9 +9,17 @@ function getSymbol(stockSymbol) {
         method: "GET"
     }).done(function (response) {
         console.log("hello");
-        createCard(response);
+        $.ajax({
+            url:"https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=" + stockSymbol +"&apikey=0V05X9O48C7R2P6N",
+            method: "GET"
+        }).done(function (response2){
+            console.log("hello");
+            createCard(response, response2);
+        });
+        // createCard(response);
     });
 
+    
 }
 
 //
@@ -29,11 +37,12 @@ $("#search").click(function () {
 });
 
 //create a card with different metrics//
-function createCard(response) {
+function createCard(response, response2) {
     //create today's date and format it to the same date as the API//
     // Create a new boostrap card container
     var article = $("<article>");
     article.addClass("card");
+    article.addClass("stockCard")
 
     // Create a new card body container
     var cardBody = $("<div>");
@@ -47,34 +56,38 @@ function createCard(response) {
     article.append(stockName);
 
     // Add information/ metrics
-    //date function//
+    //date (daily) function//
     var date = response["Meta Data"]["3. Last Refreshed"];
     console.log(date)
     var todayDate = $("<p>");
     todayDate.addClass("card-text");
     todayDate.html(response["Meta Data"]["3. Last Refreshed"]);
     article.append(todayDate);
-//end date function//
-    var series = response["Time Series (Daily)"];
-    var dailyOpen = $("<p>");
-    dailyOpen.addClass("card-text");
-    dailyOpen.html(response["Time Series (Daily)"][date]["1. open"]);
-    article.append("Open: ", dailyOpen);
+//end date (daily) function//
 
-    var dailyHigh = $("<p>");
-    dailyHigh.addClass("card-text");
-    dailyHigh.html(response["Time Series (Daily)"][date]["2. high"]);
-    article.append("Daily High: ", dailyHigh);
-
-    var dailyLow = $("<p>");
-    dailyLow.addClass("card-text");
-    dailyLow.html(response["Time Series (Daily)"][date]["3. low"]);
-    article.append("Daily Low: ", dailyLow);
+//date function (monthly)//
+    var monthDate = response2["Meta Data"]["3. Last Refreshed"];
+    console.log
+    var series = response2["Monthly Time Series"];
+    var monthOpen = $("<p>");
+    monthOpen.addClass("card-text");
+    monthOpen.html(response2["Monthly Time Series"][monthDate]["1. open"]);
+    article.append("Month Open: ", monthOpen);
 
     var dailyClose = $("<p>");
     dailyClose.addClass("card-text");
     dailyClose.html(response["Time Series (Daily)"][date]["4. close"]);
-    article.append("Close: ", dailyClose);
+    article.append("Daily Close: ", dailyClose);
+
+    var monthHigh = $("<p>");
+    monthHigh.addClass("card-text");
+    monthHigh.html(response2["Monthly Time Series"][monthDate]["2. high"]);
+    article.append("Monthly High: ", monthHigh);
+
+    var monthLow = $("<p>");
+    monthLow.addClass("card-text");
+    monthLow.html(response2["Monthly Time Series"][monthDate]["3. low"]);
+    article.append("Monthly Low: ", monthLow);
 
     // Append the new card to the HTML body
     $("#stockData").append(article);

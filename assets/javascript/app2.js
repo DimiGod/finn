@@ -1,5 +1,6 @@
 function getSymbol(stockSymbol) {
 
+
     // queryURL endpoint for Alpha Vantage (Daily)API
     var queryURL = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=" + stockSymbol + "&apikey=0V05X9O48C7R2P6N";
     console.log(queryURL)
@@ -37,6 +38,7 @@ $("#search").click(function () {
 });
 
 //create a card with different metrics//
+
 function createCard(response, response2) {
     //create today's date and format it to the same date as the API//
     // Create a new boostrap card container
@@ -101,5 +103,6 @@ function createCard(response, response2) {
           ]
         }
     });
+
 
 }

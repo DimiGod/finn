@@ -6,8 +6,10 @@ label {
     color: white;
 }
 
+
 h1 {
     color: black;
+
 }
 
 .display-4 {
@@ -24,4 +26,21 @@ small {
 
 .card-text{
     color: #222222;
+}
+
+h1{
+    color: black;
+}
+
+h2{
+    color: white;
+}
+
+.stockCard{
+    float: left;
+    width: 17rem;
+}
+
+#chart{
+    background-color: white;
 }

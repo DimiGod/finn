@@ -16,10 +16,13 @@ for (let i = 0; i < savedStockList.length; i++) {
     getSymbol(savedStockList[i]);
 }
 
-/**
- * createCard() Creates a new Bootstrap card container for the stock that's given via Alpha Vantage API.
- * @param {object} response - Alpha Vantage JSON object being passed in after parsed by Ajax.
- */
+
+function save(savedStockList)
+    for (let i = 0; i < savedStockList.length; i++) {
+        let stock = savedStockList[i];
+        getSymbol(stock);
+    }
+
 function createCard(response) {
     // Create a new boostrap card container
     let article = $("<article>");

@@ -6,8 +6,10 @@ label {
     color: white;
 }
 
-.logo {
-    color: white;
+
+h1 {
+    color: black;
+
 }
 
 .display-4 {
@@ -30,6 +32,16 @@ h1{
     color: black;
 }
 
-#card{
-   width: 18rem; 
+h2{
+    color: white;
+}
+
+.stockCard{
+    float: left;
+    width: 14rem;
+    margin: 1em;
+}
+
+#chart{
+    background-color: white;
 }

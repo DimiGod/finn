@@ -36,5 +36,9 @@ h2{
 
 .stockCard{
     float: left;
-    width: 17rem
+    width: 17rem;
+}
+
+#chart{
+    background-color: white;
 }

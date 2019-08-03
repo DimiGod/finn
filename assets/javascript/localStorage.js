@@ -5,6 +5,10 @@
  */
 var savedPortfolio = JSON.parse(localStorage.getItem("portfolio"));
 
+for(let i = 0; i < savedPortfolio.myStock.length; i++) {
+    getSymbol(savedPortfolio.myStock[i]);
+}
+
 /**
  * @class
  * This class is to store the user's stock data.
@@ -19,9 +23,6 @@ class StockOwned {
 
 
  // TEST DATA!
-let GOOG = new StockOwned("GOOG", "1");
-let SBUX = new StockOwned("SBUX", "5");
-let AAPL = new StockOwned("AAPL", "3");
 
 /**
  * @type {Object}
@@ -35,8 +36,9 @@ var portfolio = {
     top : null,
     low : null,
     bank : 0,
-    myStock : [GOOG, SBUX, AAPL]
+    myStock : [],
+    chart : null
 };
 
 // Saving the data to the localstorage. TODO: Recommended to be saved every time there's a change in data.
-localStorage.setItem("portfolio", JSON.stringify(portfolio));
+// localStorage.setItem("portfolio", JSON.stringify(portfolio));

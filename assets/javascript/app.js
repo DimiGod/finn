@@ -17,11 +17,12 @@ for (let i = 0; i < savedStockList.length; i++) {
 }
 
 
-function save(savedStockList)
+function save(savedStockList) {
     for (let i = 0; i < savedStockList.length; i++) {
         let stock = savedStockList[i];
         getSymbol(stock);
     }
+}
 
 function createCard(response) {
     // Create a new boostrap card container

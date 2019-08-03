@@ -72,12 +72,13 @@ function createCard(response, response2) {
     var monthOpen = $("<p>");
     monthOpen.addClass("card-text");
     monthOpen.html(response2["Monthly Time Series"][monthDate]["1. open"]);
-    article.append("Month Open: ", monthOpen);
+    article.append("Starting Value (Monthly Open): ", monthOpen);
+    console.log(monthOpen)
 
     var dailyClose = $("<p>");
     dailyClose.addClass("card-text");
     dailyClose.html(response["Time Series (Daily)"][date]["4. close"]);
-    article.append("Daily Close: ", dailyClose);
+    article.append("Current Value (Daily Close): ", dailyClose);
 
     var monthHigh = $("<p>");
     monthHigh.addClass("card-text");

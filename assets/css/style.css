@@ -1,85 +1,47 @@
 body{
-    background-image:url("../images/dark-triangles.png");
+    background-image:url("../images/dark_leather.png");
 }
-​
+
 label {
     color: white;
 }
-​
-.personalPerformance {
-background-color: lightgrey;
+
+
+h1 {
+    color: black;
+
 }
-​
-​
-#logo {
-    color:lightgrey;
-    font-family: 'Cormorant SC', serif;
-}
-​
+
 .display-4 {
     color: black;
 }
-​
+
 small {
     color: white;
 }
-​
+
 .form-text-text-muted {
     color: white;
 }
-​
+
 .card-text{
     color: #222222;
-    font-family: 'Cormorant SC', serif;
 }
-​
-.card{
-    border-radius: 15px;
-    padding-left: 1em;
-}
-​
+
 h1{
-    color: #222222;
+    color: black;
 }
-​
+
 h2{
     color: white;
 }
-​
+
 .stockCard{
-    border-radius: 15px;
     float: left;
     width: 14rem;
     margin: 1em;
-    background-color: light grey;
 }
-​
+
 #chart{
     background-color: white;
-    border-radius: 15px;
-    font-family: 'Cormorant SC', serif;
-}
-​
-#searchBar{
-    background-color: lightgrey;
-}
-.card-title{
-    background-color: white;
-    color: #222222;
-    font-family: 'Cormorant SC', serif;
-}
-.stockData{
-    background-color: lightgrey;
-    color: #222222;
-    font-family: 'Cormorant SC', serif;
-}
-.list-group-item{
-    background-color: white;
-    color: #222222;
-    font-family: 'Cormorant SC', serif;
-}
-.stockHelp{
-    background-color: white;
-    color: #222222;
-    font-family: 'Cormorant SC', serif;
 }

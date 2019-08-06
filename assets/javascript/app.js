@@ -123,7 +123,7 @@ function createCard(response, response2) {
             [response["Meta Data"]['2. Symbol'], startValue, currentValue]
         ]
     });
-
+//the math for each number appended to the card in the html//
     function sum(total, num) {
         return parseFloat(total) + parseFloat(num);
     }

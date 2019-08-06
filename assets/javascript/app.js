@@ -85,14 +85,14 @@ function createCard(response, response2) {
     var monthOpen = $("<p>");
     monthOpen.addClass("card-text");
     monthOpen.html(response2["Monthly Time Series"]["2019-08-06"]["1. open"]);
-    article.append("Starting Value (Monthly Open): ", monthOpen);
+    article.append("Starting Value: ", monthOpen);
     var startValue= response2["Monthly Time Series"]["2019-08-06"]["1. open"];
     v1.push(response2["Monthly Time Series"]["2019-08-06"]["1. open"]);
 
     var dailyClose = $("<p>");
     dailyClose.addClass("card-text");
     dailyClose.html(response["Time Series (Daily)"]["2019-08-06"]["4. close"]);
-    article.append("Current Value (Daily Close): ", dailyClose);
+    article.append("Current Value: ", dailyClose);
     var currentValue= response["Time Series (Daily)"]["2019-08-06"]["4. close"];
     v2.push(response["Time Series (Daily)"]["2019-08-06"]["4. close"]);
 

@@ -84,26 +84,26 @@ function createCard(response, response2) {
     var series = response2["Monthly Time Series"];
     var monthOpen = $("<p>");
     monthOpen.addClass("card-text");
-    monthOpen.html(response2["Monthly Time Series"]["2019-08-06"]["1. open"]);
+    monthOpen.html(response2["Monthly Time Series"]["2019-09-06"]["1. open"]);
     article.append("Starting Value: ", monthOpen);
-    var startValue= response2["Monthly Time Series"]["2019-08-06"]["1. open"];
-    v1.push(response2["Monthly Time Series"]["2019-08-06"]["1. open"]);
+    var startValue= response2["Monthly Time Series"]["2019-09-06"]["1. open"];
+    v1.push(response2["Monthly Time Series"]["2019-09-06"]["1. open"]);
 
     var dailyClose = $("<p>");
     dailyClose.addClass("card-text");
-    dailyClose.html(response["Time Series (Daily)"]["2019-08-06"]["4. close"]);
+    dailyClose.html(response["Time Series (Daily)"]["2019-09-06"]["4. close"]);
     article.append("Current Value: ", dailyClose);
-    var currentValue= response["Time Series (Daily)"]["2019-08-06"]["4. close"];
-    v2.push(response["Time Series (Daily)"]["2019-08-06"]["4. close"]);
+    var currentValue= response["Time Series (Daily)"]["2019-09-06"]["4. close"];
+    v2.push(response["Time Series (Daily)"]["2019-09-06"]["4. close"]);
 
     var monthHigh = $("<p>");
     monthHigh.addClass("card-text");
-    monthHigh.html(response2["Monthly Time Series"]["2019-08-06"]["2. high"]);
+    monthHigh.html(response2["Monthly Time Series"]["2019-09-06"]["2. high"]);
     article.append("Monthly High: ", monthHigh);
 
     var monthLow = $("<p>");
     monthLow.addClass("card-text");
-    monthLow.html(response2["Monthly Time Series"]["2019-08-06"]["3. low"]);
+    monthLow.html(response2["Monthly Time Series"]["2019-09-06"]["3. low"]);
     article.append("Monthly Low: ", monthLow);
 
     // Append the new card to the HTML body

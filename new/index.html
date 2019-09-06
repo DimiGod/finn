@@ -1,0 +1,81 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!--font Awesome-->
+	<script src="https://kit.fontawesome.com/ba12d81664.js"></script>
+	<!--CSS-->
+	<link rel="stylesheet" type="text/css" media="screen" href="assets/style/aperi.css">
+	<!--Authors-->
+	<meta name="author" content="Diana W Lam, Leonard Ezeudu, Orlando B. and Rodrigo Robles">	
+	<!--Bootstrap-->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!--<link rel="stylesheet" type="text/css" href="/assets/style/bootstrap.min.css">-->
+	 <!-- jQuery library -->
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<title>Aperi Widget</title>
+</head>
+
+<body class="bg-secondary">
+			<!--Stocks -->
+			<section id="stocksDisplay" class="shadow text-center bg-light ml-5 mr-5 mb-3 border-0 rounded">
+					<!--Header-->
+					<h2 class="bg-dark text-center text-light rounded-top border-0 p-2"><i class="fas fa-chart-line"></i> Stocks</h2>
+
+					<!--input and seach btn-->
+					<div class="">
+						<input class=" mt-2 mb-2 ml-5" type="text" value="" placeholder="Company symbol ..." id="searchSymbol">
+						<h3 id="buttonStocks" class=" btn btn-success mt-1 ml-1 "><i class="far fa-money-bill-alt"> Search</i></h3>
+						<hr class="ml-4 mr-4">
+					</div>
+					<!--Company name display-->
+					<div class="d-flex m-4">
+						<div class="col-6 m-1 ml-4">
+							<h4 class="ml-2" id="companyName"></h4>
+							<!--logo display-->
+
+							<img class="ml-3" alt="" id="logo" src=""/>
+							<span class="justify-contents-center mr-1">
+									<!--Price display-->
+									<h5 class="mt-5 display-4" id="livePrice"></h5>
+									<h6 id="peRatio"></h6>
+									<h6 id="mktCap"></h6>
+	
+							</span>
+							
+							
+						</div>
+						<!--Graph display-->
+						<div class="ct-chart ct-perfect-fourthbr"></div>	
+					
+			</section>
+			 
+			
+		<!--footer-->	  
+	<footer id="footer" class="bg-dark text-light"><p>Aperi Widget 2019 &copy;</p></footer>   
+	
+	<!--end of wraper-->
+	</div>
+
+	
+
+
+
+					  		
+
+	<!--Chart js library-->
+	<script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+	<!--Chart CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+	<!--Jquery CDN-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!--Stocks-->
+	<script src="assets/script/stocks.js"></script>
+
+</body>
+
+</html>

@@ -53,14 +53,12 @@
 
 
     <div class="container" id="searchBar" style="margin-top: 1em; margin-bottom:2em">
-        <h1>Stock Lookup</h1>
-        <div class="form-group">
-            <label for="InputStock">Stock Symbol</label>
-            <input type="symbol" class="form-control" id="inputSymbol" aria-describedby="symbolHelp"
-                placeholder="Enter symbol">
-            <small id="stockHelp" class="form-text-text-muted">Enter company's symbol (ex: MSFT = Microsoft)</small>
+        <!--input and seach btn-->
+        <div class="">
+            <input class=" mt-2 mb-2 ml-5" type="text" value="" placeholder="Company symbol ..." id="searchSymbol">
+            <h3 id="buttonStocks" class=" btn btn-success mt-1 ml-1 "><i class="far fa-money-bill-alt"> Search</i></h3>
+            <hr class="ml-4 mr-4">
         </div>
-        <button id="search" type="submit" class="btn btn-primary">Search</button>
 
     </div>
     <div class="container" id="stockData" style="margin-top: 1em; margin-bottom:2em">
@@ -71,6 +69,10 @@
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <script src="assets/c3-0.7.3/c3.min.js"></script>
         <script type="text/javascript" src="assets/javascript/app.js"></script>
+        <!--Chart js library-->
+	<script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+	<!--Chart CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     </div>
     <!-- This container will hold the current portfolio of stocks being held by the User-->
 <div class="container" id="savedPortfolio">
@@ -79,6 +81,32 @@
 
     </div>
 </div>
+<section id="stocksDisplay" class="shadow text-center bg-light ml-5 mr-5 mb-3 border-0 rounded">
+    <!--Header-->
+    <h2 class="bg-dark text-center text-light rounded-top border-0 p-2"><i class="fas fa-chart-line"></i> Stocks</h2>
+
+    
+    <!--Company name display-->
+    <div class="d-flex m-4">
+        <div class="col-6 m-1 ml-4">
+            <h4 class="ml-2" id="companyName"></h4>
+            <!--logo display-->
+
+            <img class="ml-3" alt="" id="logo" src=""/>
+            <span class="justify-contents-center mr-1">
+                    <!--Price display-->
+                    <h5 class="mt-5 display-4" id="livePrice"></h5>
+                    <h6 id="peRatio"></h6>
+                    <h6 id="mktCap"></h6>
+
+            </span>
+            
+            
+        </div>
+        <!--Graph display-->
+        <div class="ct-chart ct-perfect-fourthbr"></div>	
+    
+</section>
 
 </body>
 

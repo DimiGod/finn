@@ -258,3 +258,5 @@ var data = {
   // is the actual data object. As a third parameter we pass in our custom options.
   new Chartist.Line('.ct-chart', data, options);
 }
+
+//Create new variables for the stock prices to implement net change in portfolio information//

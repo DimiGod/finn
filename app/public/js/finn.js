@@ -202,6 +202,7 @@ $.ajax({
     for (var i=0; i<response.length; i++){
         getLabels.push(response[i].label);
         getSeries.push(response[i].close);
+        console.log(response.length);
     }
 
     //function to print chart sending labels and series just taken from the API 
@@ -260,3 +261,54 @@ var data = {
 }
 
 //Create new variables for the stock prices to implement net change in portfolio information//
+
+//var stockName= response.companyName
+//var currentPrice = response.latestPrice
+//var purchaseDate = *(YYYY-MM-DD)* When Someone clicks the "Add to Portfolio Button, we will store the date here."
+//var p1= GET /stock/{symbol}/chart/{range}/{date}
+
+
+
+//*** Ajax GET Requests ***/
+// function getAjax(url, success) {
+//     var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+//     xhr.open('GET', url);
+//     xhr.onreadystatechange = function() {
+//         if (xhr.readyState>3 && xhr.status==200) success(xhr.responseText);
+//     };
+//     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+//     xhr.send();
+//     return xhr;
+// }
+
+// // example request
+// getAjax('http://foo.bar/?p1=1&p2=Hello+World', function(data){ console.log(data); });
+
+// getAjax('http://foo.bar/?p1=1&p2=Hello+World', function(data){
+//     var json = JSON.parse(data);
+//     console.log(json); 
+// });
+
+//*** Ajax Post Requests ***/
+
+// function postAjax(url, data, success) {
+//     var params = typeof data == 'string' ? data : Object.keys(data).map(
+//             function(k){ return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]) }
+//         ).join('&');
+
+//     var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+//     xhr.open('POST', url);
+//     xhr.onreadystatechange = function() {
+//         if (xhr.readyState>3 && xhr.status==200) { success(xhr.responseText); }
+//     };
+//     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+//     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+//     xhr.send(params);
+//     return xhr;
+// }
+
+// // example request
+// postAjax('http://foo.bar/', 'p1=1&p2=Hello+World', function(data){ console.log(data); });
+
+// // example request with data object
+// postAjax('http://foo.bar/', { p1: 1, p2: 'Hello World' }, function(data){ console.log(data); });

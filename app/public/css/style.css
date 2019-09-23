@@ -76,3 +76,11 @@ h2{
     color: #222222;
     font-family: 'Cormorant SC', serif;
 }
+
+#personalPerformanceJumbotron{
+    background-color: black;
+    border: 5px;
+    border-top-color: white;
+    border-bottom-color: white;
+    color: white;
+}

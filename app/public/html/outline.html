@@ -2,47 +2,91 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Finn</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+                crossorigin="anonymous">
         <link rel="stylesheet" href="../css/style.css">
         <!-- Load c3.css -->
         <link href="../c3-0.7.3/c3.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
+
 <body>
-    <!--Nav bar w/ logo-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">FINN</a>
-    </nav>
-<!--End Nav bar w/logo-->
+        <!--Nav bar w/ logo-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">FINN</a>
+        </nav>
+        <!--End Nav bar w/logo-->
 
-<!-- Welcome Message, Centered, White Text- Name in Green-->
-<!--End Welcome Message-->
+        <!-- Welcome Message, Centered, White Text- Name in Green-->
+        <!--End Welcome Message-->
 
-  <div class="jumbotron jumbotron-fluid"id="personalPerformanceJumbotron" style="margin-top: 2em; margin-bottom: 2em;">
-  <div class="container">
-    <h1 class="display-4">Fluid jumbotron</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-  </div>
-</div>      
-</div>
-<!--Edge to Edge Jumbotron, white line for top and bottom border: to include "Snapshot" Section
+        <div id="line" style='border-top:1px solid #ccc; margin-top:2em;'></div>
+        <div class="jumbotron jumbotron-fluid" id="personalPerformanceJumbotron">
+
+
+
+                <div class="container">
+                        <div class="row">
+                                <div class="col-md-6">
+                                        <h1 class="display-4">Fluid jumbotron</h1>
+                                        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its
+                                        parent.</p>
+                                </div>
+                                <div class="col-md-1"></div>
+                                <div class="col-md-5">
+                                        <img src="../images/phGraph3.jpg" width=600px;>
+                                </div>
+                        </div>
+                </div>
+                
+        </div>
+        <div id="line" style='border-bottom:1px solid #ccc;'></div>
+        <div class="jumbotron jumbotron-fluid" id="personalPerformanceJumbotron">
+        <div class="container">
+                <div class="row">
+                        <div class="col-md-2">
+                                <h5>AAPL</h4>
+                        </div>
+                        <div class="col-md-2">
+                                <h5>$734.46</h4>
+                        </div>
+                        <div class="col-md-2">
+                                <h5>$784.46</h4>
+                        </div>
+                        <div class="col-md-2" class="priceChange">
+                                <h4>$50.00</h4>
+                        </div>
+                        <div class="col-md-2" class="stockprcnt">
+                                <h4>6.08%</h4>
+                        </div>
+                        <div class="col-md-2">
+                                <img src="../images/phGraph3.jpg" width=200px>
+                        </div>
+                </div>
+        </div>        
+        </div>
+        <div id="line" style='border-bottom:1px solid #ccc;'></div>
+        
+
+        <!--Edge to Edge Jumbotron, white line for top and bottom border: to include "Snapshot" Section
 *Column 1*
 -portfolio value
 -Net Gains (Losses)
 -Button to Manage Portfolio (Link to Portfolio Page)
 *Column 2*
 -Graph of Portfolio Performance-->
-<!--End Personal Performance Section-->
+        <!--End Personal Performance Section-->
 
-<!--JQuerry and other Necessary API Links-->
+        <!--JQuerry and other Necessary API Links-->
 
-<!-- Portfolio Section, edge to edge rows, white top and bottom border, white text/ conditional red/green text for net gain (loss)
+        <!-- Portfolio Section, edge to edge rows, white top and bottom border, white text/ conditional red/green text for net gain (loss)
 *Column 1*
 -Stock Ticker (Or Name)
 *Column 2*
@@ -52,9 +96,9 @@
 *Column 4*
 -Graph of Performance--->
 
-<!--Create As Many Rows As Necessary To Accomodate All Stocks In The Portfolio-->
+        <!--Create As Many Rows As Necessary To Accomodate All Stocks In The Portfolio-->
 
-<!--End Portfolio Section-->
+        <!--End Portfolio Section-->
 </body>
-</html>
 
+</html>

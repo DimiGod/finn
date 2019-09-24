@@ -1,5 +1,5 @@
 body{
-    background-image:url("../images/dark-grey-terrazzo.png");
+    background-color: black;
 }
 
 #label {
@@ -79,8 +79,29 @@ h2{
 
 #personalPerformanceJumbotron{
     background-color: black;
-    border: 5px;
-    border-top-color: white;
-    border-bottom-color: white;
     color: white;
+}
+
+.border-top{
+    color: white;
+}
+
+.border-bottom{
+    color:white;
+}
+
+.display-4{
+    color:white
+}
+
+.stockprcnt{
+    color:green
+}
+
+.priceChange{
+    color:green
+    
+}
+
+h4{ color:green;
 }
